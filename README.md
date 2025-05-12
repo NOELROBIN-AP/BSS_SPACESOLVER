@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/b2cb7a2c-0e94-4b33-b6b5-3277626d58e7
   Enables simulation of docking and close-approach maneuvers.
 
 - **MGA Trajectory Solver**  
-  Calculates gravity-assisted trajectories for efficient space travel.  
+  Calculates gravity-assisted trajectories for efficient space travel. Based on https://www.sciencedirect.com/science/article/abs/pii/S0094576513001938?via%3Dihub
 
 https://github.com/user-attachments/assets/5391c188-97b9-4820-a6b8-dadd0ca0f09e
 
