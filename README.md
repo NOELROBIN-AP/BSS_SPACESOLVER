@@ -1,5 +1,8 @@
 # **BSS_SPACESOLVER**
 
+![LOGO_GIT](https://github.com/user-attachments/assets/b79b4823-adde-43e7-b992-5246f54b0f40)
+
+
 **BSS_SPACESOLVER** is a gravity and Multiple Gravity Assist (MGA) solver developed using Autodesk Bifrost.  
 It is designed for simulating planetary interactions, orbital mechanics, and interplanetary navigation, with a focus on modularity and extendibility.
 
