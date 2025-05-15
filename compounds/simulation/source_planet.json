@@ -1,0 +1,404 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "BSS::simulation::source_planet",
+            "metadata": [
+				{
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/planet.svg"
+				},
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "PLANET_INPUT",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-613 -155.5"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "PLANET_NAME"
+                                                },
+                                                {
+                                                    "metaName": "PLANET_MESH"
+                                                },
+                                                {
+                                                    "metaName": "PLANET_WEIGHT"
+                                                },
+                                                {
+                                                    "metaName": "INITIAL_SPEED"
+                                                },
+                                                {
+                                                    "metaName": "FIXED_ORBIT"
+                                                },
+                                                {
+                                                    "metaName": "ORBIT_RADIUS"
+                                                },
+                                                {
+                                                    "metaName": "ORBIT_SPEED"
+                                                },
+                                                {
+                                                    "metaName": "ORBIT_ANGLE"
+                                                },
+                                                {
+                                                    "metaName": "ORBIT_START_ANGLE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "31.000000"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "PLANET_OUTPUT",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "281 -120.5"
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "33.000000"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_planet"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Graph,compound"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,BSS::simulation,simulate_space"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Simulation::Aero,simulate_aero"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,BSS::Compounds,simulate_space"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-79.6986 -1066.97"
+                },
+                {
+                    "metaName": "zValue",
+                    "metaType": "string",
+                    "metaValue": "68.000000"
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"group\": \"PLANET\",\n                \"items\": [\n                    {\n                        \"port\": \"PLANET_NAME\"\n                    },\n                    {\n                        \"port\": \"PLANET_MESH\"\n                    }\n                ],\n                \"unique_id\": 40\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"SIMULATION SETTINGS\",\n                \"items\": [\n                    {\n                        \"port\": \"PLANET_WEIGHT\"\n                    }\n                ],\n                \"unique_id\": 50\n            },\n            {\n                \"condition\": {\n                    \"action\": \"disable\",\n                    \"op\": \"==\",\n                    \"port\": \"FIXED_ORBIT\",\n                    \"value\": \"\"\n                },\n                \"group\": \"Disable based on: FIXED_ORBIT\",\n                \"items\": [\n                    {\n                        \"port\": \"INITIAL_SPEED\"\n                    }\n                ],\n                \"unique_id\": 30\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"ORBIT\",\n                \"items\": [\n                    {\n                        \"port\": \"FIXED_ORBIT\"\n                    },\n                    {\n                        \"condition\": {\n                            \"action\": \"enable\",\n                            \"op\": \"==\",\n                            \"port\": \"FIXED_ORBIT\",\n                            \"value\": \"\"\n                        },\n                        \"group\": \"Enable based on: FIXED_ORBIT\",\n                        \"items\": [\n                            {\n                                \"port\": \"ORBIT_RADIUS\"\n                            },\n                            {\n                                \"port\": \"ORBIT_SPEED\"\n                            },\n                            {\n                                \"port\": \"ORBIT_ANGLE\"\n                            },\n                            {\n                                \"port\": \"ORBIT_START_ANGLE\"\n                            }\n                        ],\n                        \"unique_id\": 20\n                    }\n                ],\n                \"unique_id\": 10\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "PortExpandedState",
+                    "metadata": [
+                        {
+                            "metaName": "ORBIT",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "SIMULATION SETTINGS",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "PLANET_NAME",
+                    "portDirection": "input",
+                    "portType": "string",
+                    "metadata": [
+                        {
+                            "metaName": "UIWidget",
+                            "metaType": "string",
+                            "metaValue": ""
+                        }
+                    ]
+                },
+                {
+                    "portName": "PLANET_MESH",
+                    "portDirection": "input",
+                    "portType": "Object"
+                },
+                {
+                    "portName": "PLANET_WEIGHT",
+                    "portDirection": "input",
+                    "portType": "double",
+                    "metadata": [
+                        {
+                            "metaName": "UISoftMin",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "portName": "INITIAL_SPEED",
+                    "portDirection": "input",
+                    "portType": "Math::float3"
+                },
+                {
+                    "portName": "FIXED_ORBIT",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "ORBIT_RADIUS",
+                    "portDirection": "input",
+                    "portType": "double"
+                },
+                {
+                    "portName": "ORBIT_SPEED",
+                    "portDirection": "input",
+                    "portType": "double"
+                },
+                {
+                    "portName": "ORBIT_ANGLE",
+                    "portDirection": "input",
+                    "portType": "float"
+                },
+                {
+                    "portName": "ORBIT_START_ANGLE",
+                    "portDirection": "input",
+                    "portType": "float"
+                },
+                {
+                    "portName": "out_planet",
+                    "portDirection": "output"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "value",
+                    "valueType": "BSS::Planet",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": ""
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "value",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-169.5 -149"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "32.000000"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".PLANET_NAME",
+                    "target": "value.value.PLANET_NAME"
+                },
+                {
+                    "source": ".PLANET_MESH",
+                    "target": "value.value.PLANET_MESH"
+                },
+                {
+                    "source": ".PLANET_WEIGHT",
+                    "target": "value.value.PLANET_WEIGHT"
+                },
+                {
+                    "source": ".INITIAL_SPEED",
+                    "target": "value.value.INITIAL_SPEED"
+                },
+                {
+                    "source": ".FIXED_ORBIT",
+                    "target": "value.value.FIXED ORBIT"
+                },
+                {
+                    "source": ".ORBIT_RADIUS",
+                    "target": "value.value.ORBIT RADIUS"
+                },
+                {
+                    "source": ".ORBIT_SPEED",
+                    "target": "value.value.ORBIT SPEED"
+                },
+                {
+                    "source": ".ORBIT_ANGLE",
+                    "target": "value.value.ORBIT ANGLE"
+                },
+                {
+                    "source": ".ORBIT_START_ANGLE",
+                    "target": "value.value.ORBIT START_ANGLE"
+                },
+                {
+                    "source": "value.output",
+                    "target": ".out_planet"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "value.value",
+                    "valueType": "BSS::Planet",
+                    "value": {
+                        "PLANET_NAME": "0",
+                        "PLANET_MESH": {},
+                        "PLANET_WEIGHT": "0",
+                        "INITIAL_SPEED": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "0f"
+                        },
+                        "FIXED ORBIT": "false",
+                        "ORBIT RADIUS": "0",
+                        "ORBIT SPEED": "0",
+                        "ORBIT ANGLE": "0f",
+                        "ORBIT START_ANGLE": "0f"
+                    }
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "PLANET_INPUT"
+                },
+                {
+                    "name": "PLANET_OUTPUT"
+                }
+            ]
+        }
+    ]
+}

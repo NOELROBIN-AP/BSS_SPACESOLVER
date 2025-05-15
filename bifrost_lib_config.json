@@ -1,0 +1,15 @@
+{
+  "AminoConfigurations": [
+    {
+      "vendorName": "Robin Noël",
+      "libraryVersion": "1.1.0",
+      "libraryName": "Bifrost Space Solver",
+      "jsonLibs": [
+        {
+          "path": "compounds"
+        }
+
+      ]
+    }
+  ]
+}
